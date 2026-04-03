@@ -1,0 +1,15 @@
+[build]
+  # Navigate into the frontend folder before running build commands
+  base = "frontend"
+  
+  # The directory where Vite places the production build assets
+  publish = "dist"
+  
+  # The build command to generate the production optimized SPA
+  command = "npm run build"
+
+[[redirects]]
+  # Redirect all unmatched traffic to index.html to allow React to handle routing (SPA behavior)
+  from = "/*"
+  to = "/index.html"
+  status = 200
